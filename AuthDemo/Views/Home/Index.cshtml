@@ -1,0 +1,21 @@
+﻿@model HomePageViewModel
+
+<h1>Welcome to our auth demo home page!!</h1>
+
+@if (Model.IsLoggedIn)
+{
+    <h2>Hello logged in user!</h2>
+}
+else
+{
+    <h2>Hello guest!</h2>
+}
+
+@if(User.Identity.IsAuthenticated)
+{
+    <h1>LOGGED IN MESSAGE FROM VIEW</h1>
+}
+else
+{
+    <h1>GUEST MESSAGE FROM VIEW</h1>
+}
